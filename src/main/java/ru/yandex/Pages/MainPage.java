@@ -17,6 +17,11 @@ public class MainPage {
      */
     public SelenideElement bntTv = $(byXpath("//li[contains(.,'Программа')]"));
 
+    /**
+     * Главная страница Карта
+     */
+    public SelenideElement map = $(byXpath("//*[@data-id=\"maps\"]"));
+
     public void InputInPage(){
 
 
