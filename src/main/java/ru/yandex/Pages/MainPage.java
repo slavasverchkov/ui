@@ -18,6 +18,11 @@ public class MainPage {
     public SelenideElement bntTv = $(byXpath("//li[contains(.,'Программа')]"));
 
     /**
+     * Кнопка 'Телепрограмма'
+     */
+    public SelenideElement bntTvNew = $(byXpath("//a[@data-id=\"tv\"]"));
+
+    /**
      * Главная страница Карта
      */
     public SelenideElement map = $(byXpath("//*[@data-id=\"maps\"]"));
