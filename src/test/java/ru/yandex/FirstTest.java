@@ -20,12 +20,12 @@ public class FirstTest {
     private String url = "https://yandex.ru";
 
     @BeforeClass
-    public void setUp(){
+    public void setUp() {
         Configuration.startMaximized = true;
     }
 
-    @Test
-    public void openYandex(){
+    @Test(groups = {"runs"})
+    public void openYandex() {
         open(url);
         mainPage.searchString.shouldBe(exist);
     }
@@ -39,7 +39,7 @@ public class FirstTest {
     }
 
     @Test
-    public void goToMap(){
+    public void goToMap() {
         open(url);
         mainPage.map.click();
         sleep(5000);
@@ -47,7 +47,7 @@ public class FirstTest {
     }
 
     @Test
-    public void yesterdayTvProgram(){
+    public void yesterdayTvProgram() {
         open(url);
         mainPage.bntTvNew.click();
         sleep(5000);

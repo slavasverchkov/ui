@@ -3,8 +3,8 @@ package ru.yandex;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.response.Response;
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
+import org.testng.Assert;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.*;
@@ -12,7 +12,7 @@ import static org.hamcrest.Matchers.not;
 
 public class SecondTest {
 
-    @BeforeAll
+    @BeforeClass
     public static void setup() {
         RestAssured.baseURI = "https://reqres.in";
     }
@@ -30,7 +30,7 @@ public class SecondTest {
                 .when().get("/v2/store/order/3")
                 .then().assertThat().statusCode(200).log().all().extract().response();
 
-        Assertions.assertEquals(200, response.statusCode());
+        Assert.assertEquals(200, response.statusCode());
 
 
     }
@@ -46,7 +46,7 @@ public class SecondTest {
                 .then().log().all()
                 .extract().response();
 
-        Assertions.assertEquals(200, response.statusCode());
+        Assert.assertEquals(200, response.statusCode());
 //        Assertions.assertEquals("name", response.jsonPath().getString("morpheus"));
 
     }
