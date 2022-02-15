@@ -30,7 +30,7 @@ public class FirstTest {
         mainPage.searchString.shouldBe(exist);
     }
 
-    @Test
+    @Test(groups = {"runs"})
     public void tvProgram(){
         open(url);
         mainPage.bntTv.click();
@@ -38,7 +38,7 @@ public class FirstTest {
         tvPage.tvProgram.shouldBe(exist);
     }
 
-    @Test
+    @Test(groups = {"runs"})
     public void goToMap() {
         open(url);
         mainPage.map.click();
@@ -46,7 +46,7 @@ public class FirstTest {
         mapPage.mapRostov.shouldBe(exist);
     }
 
-    @Test
+    @Test(groups = {"runs"})
     public void yesterdayTvProgram() {
         open(url);
         mainPage.bntTvNew.click();
